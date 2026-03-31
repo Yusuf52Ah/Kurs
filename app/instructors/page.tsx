@@ -1,9 +1,10 @@
 import Container from "../components/marketplace/Container";
-import CourseCatalog from "../components/marketplace/CourseCatalog";
 import Footer from "../components/marketplace/Footer";
 import Header from "../components/marketplace/Header";
+import InstructorCard from "../components/marketplace/InstructorCard";
+import { instructorProfiles } from "@/lib/marketplace-data";
 
-export default function CoursesPage() {
+export default function InstructorsPage() {
   return (
     <main className="min-h-screen bg-[var(--bg-main)]">
       <Header />
@@ -11,21 +12,23 @@ export default function CoursesPage() {
       <section className="border-b border-[var(--border-color)] bg-[var(--bg-deep)] py-10">
         <Container>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--text-secondary)]">
-            Course Marketplace
+            Top Instructor Network
           </p>
           <h1 className="mt-3 font-display text-4xl font-semibold text-[var(--text-primary)]">
-            Kurslar katalogi
+            Portfolio uslubidagi mentor profillari
           </h1>
-          <p className="mt-3 max-w-2xl text-sm text-[var(--text-secondary)] sm:text-base">
-            Maqsadingizga mos kursni qidiruv, kategoriya, narx va daraja bo&apos;yicha
-            bir necha soniyada toping.
+          <p className="mt-3 max-w-3xl text-sm text-[var(--text-secondary)] sm:text-base">
+            Har bir mentorning real loyiha natijalari, mutaxassisligi va talaba
+            feedbacklari asosida sizga mos o&apos;qituvchini tanlang.
           </p>
         </Container>
       </section>
 
       <section className="py-8 sm:py-10">
-        <Container>
-          <CourseCatalog />
+        <Container className="grid gap-4 lg:grid-cols-2">
+          {instructorProfiles.map((instructor) => (
+            <InstructorCard key={instructor.id} instructor={instructor} />
+          ))}
         </Container>
       </section>
 

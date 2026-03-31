@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import {
   BarChart3,
   BookOpen,
+  Home,
   LayoutGrid,
   MessageSquare,
   Settings,
@@ -12,8 +13,9 @@ import {
 } from "lucide-react";
 
 const navItems = [
+  { label: "Bosh sahifa", icon: Home, href: "/" },
   { label: "Dashboard", icon: LayoutGrid, href: "/dashboard" },
-  { label: "Kurslarim", icon: BookOpen, href: "/" },
+  { label: "Kurslarim", icon: BookOpen, href: "/learn" },
   { label: "Auditoriyalar", icon: Target, href: "/audiences" },
   { label: "Analitika", icon: BarChart3, href: "/analytics" },
   { label: "Xabarlar", icon: MessageSquare, href: "/messages" },
@@ -30,9 +32,9 @@ export default function Sidebar() {
           <Target className="h-5 w-5" />
         </div>
         <div>
-          <p className="text-sm font-semibold">Targeting Lab</p>
+          <p className="text-sm font-semibold">Sammi</p>
           <p className="text-xs text-slate-500 dark:text-slate-400">
-            Minimalistik o'quvchi paneli
+            Minimalistik kurs platformasi
           </p>
         </div>
       </div>
@@ -59,11 +61,9 @@ export default function Sidebar() {
       </nav>
 
       <div className="mt-auto rounded-2xl border border-slate-200 bg-slate-50 p-4 text-xs text-slate-600 dark:border-slate-800 dark:bg-slate-900/60 dark:text-slate-300">
-        <p className="font-semibold text-slate-900 dark:text-white">
-          Targeting Kursi
-        </p>
+        <p className="font-semibold text-slate-900 dark:text-white">Sammi</p>
         <p className="mt-1">
-          Rejalashtirilgan darslar, topshiriqlar va feedback shu yerda.
+          Darslar, topshiriqlar va feedback shu yerda.
         </p>
       </div>
     </aside>

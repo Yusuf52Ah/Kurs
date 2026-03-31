@@ -74,7 +74,7 @@ export default function DashboardPage() {
             </p>
           </div>
           <Link
-            href="/"
+            href="/learn"
             className="inline-flex items-center gap-2 rounded-full bg-[#0066FF] px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition hover:bg-[#0b5be0]"
           >
             Darsni davom ettirish
@@ -112,7 +112,7 @@ export default function DashboardPage() {
       <section className="grid gap-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
         <div className="rounded-3xl border border-slate-200 bg-white/90 p-6 shadow-sm shadow-slate-200/40 dark:border-slate-800 dark:bg-slate-950/70 dark:shadow-none">
           <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
-            Modul bo'yicha progress
+            Modul bo&apos;yicha progress
           </h2>
           <div className="mt-4 space-y-4">
             {moduleStats.map((module) => {
@@ -160,7 +160,7 @@ export default function DashboardPage() {
               </span>
             </li>
             <li className="rounded-2xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-900/60">
-              So'nggi modul:{" "}
+              So&apos;nggi modul:{" "}
               <span className="font-semibold text-slate-900 dark:text-white">
                 {DUMMY_DATA.modules[DUMMY_DATA.modules.length - 1]?.title}
               </span>

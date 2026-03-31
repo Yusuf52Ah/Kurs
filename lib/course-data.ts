@@ -162,11 +162,11 @@ export const getCourseSnapshot = (course: Course): CourseSnapshot => {
 
   let currentLesson = lessons[0]!;
   let currentModule = modules[0]!;
-  for (const module of modules) {
-    const activeLesson = module.lessons.find((lesson) => lesson.isCurrent);
+  for (const courseModule of modules) {
+    const activeLesson = courseModule.lessons.find((lesson) => lesson.isCurrent);
     if (activeLesson) {
       currentLesson = activeLesson;
-      currentModule = module;
+      currentModule = courseModule;
       break;
     }
   }

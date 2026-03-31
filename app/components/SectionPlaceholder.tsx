@@ -13,7 +13,7 @@ export default function SectionPlaceholder({
         {title}
       </p>
       <h1 className="mt-2 text-2xl font-semibold text-slate-900 dark:text-white">
-        {title} bo'limi
+        {title} bo&apos;limi
       </h1>
       <p className="mt-3 max-w-xl text-sm">{description}</p>
     </section>
